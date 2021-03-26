@@ -11,11 +11,11 @@ campoFiltro.addEventListener("input", function(){
       let nome = tdNome.textContent;
       //criando uma regex para deixar a pesquisa mais dinamica
       let expressao = new RegExp(this.value, "i");
-      if(!expressao.test(nome)){
-        paciente.classList.add("invisivel");
-      }else{
+      if (expressao.test(nome)) {
         paciente.classList.remove("invisivel");
-      }
+    } else {
+        paciente.classList.add("invisivel");
+    }
     }
   }else{
     for(var i = 0; i<pacientes.length;i++){
