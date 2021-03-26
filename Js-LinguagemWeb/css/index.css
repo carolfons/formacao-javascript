@@ -151,3 +151,7 @@ button:disabled {
   height: 35px;
   margin: 10px;
 }
+
+.invisivel {
+  display: none;
+}
