@@ -4,9 +4,17 @@ botaoBuscar.addEventListener("click", function (){
   let xhr = new XMLHttpRequest();
 
   xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
-  xhr.send();
+
   xhr.addEventListener("load", function(){
-    console.log(xhr.responseText);
-  })
+    var resposta = xhr.responseText;
+    let pacientes = JSON.parse(resposta);
+
+    pacientes.forEach(function(paciente){
+      adicionaPacienteTabela(paciente);
+    });
+
+  });
+
+  xhr.send();
 
 });
