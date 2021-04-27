@@ -15,7 +15,7 @@ botaoBuscar.addEventListener("click", function (){
       let pacientes = JSON.parse(resposta);
 
       pacientes.forEach(function(paciente){
-      adicionaPacienteTabela(paciente);
+        adicionaPacienteTabela(paciente);
 
       });
     }else{
